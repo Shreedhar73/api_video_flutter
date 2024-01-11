@@ -11,7 +11,8 @@ class UploadVideoBloc extends Bloc<UploadVideoEvent, UploadVideoState> {
   UploadVideoBloc() : super(UploadVideoInitial()) {
     on<UploadLocalVideoEvent>((event, emit) async {
       emit(UploadVideoLoading());
-      final uploadVideo = await UploadVideoDataSource().uploadVideo(event.file);
+      final uploadVideo =
+          await UploadVideoDataSource().uploadVideo(event.fileParams);
       if (uploadVideo is Video) {
         emit(UploadVideoSuccess(video: uploadVideo));
       } else {

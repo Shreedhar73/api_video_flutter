@@ -5,8 +5,20 @@ abstract class UploadVideoEvent extends Equatable {
 }
 
 class UploadLocalVideoEvent extends UploadVideoEvent {
-  final XFile file;
-  const UploadLocalVideoEvent({required this.file});
+  final UploadLocalVideoParams fileParams;
+  const UploadLocalVideoEvent({required this.fileParams});
   @override
-  List<Object> get props => [];
+  List<Object> get props => [fileParams];
+}
+
+class UploadLocalVideoParams {
+  final XFile file;
+  final String title;
+  final String description;
+
+  UploadLocalVideoParams({
+    required this.file,
+    required this.title,
+    required this.description,
+  });
 }

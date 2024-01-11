@@ -1,6 +1,6 @@
 import 'package:api_video/features/home_page/home.dart';
 import 'package:api_video/features/home_page/list_video_bloc/list_video_bloc.dart';
-import 'package:api_video/features/upload/blocs/pick_video_bloc/pick_video_bloc.dart';
+import 'package:api_video/features/pick_video/blocs/pick_video_bloc/pick_video_bloc.dart';
 import 'package:api_video/features/upload/blocs/upload_video_bloc/upload_video_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -15,19 +15,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: Colors.deepPurple,
-            primary: Colors.black.withOpacity(0.5)),
-        useMaterial3: true,
-      ),
-      home: MultiBlocProvider(providers: [
+    return MultiBlocProvider(
+      providers: [
         BlocProvider(create: (context) => ListVideoBloc()),
         BlocProvider(create: (context) => PickVideoBloc()),
         BlocProvider(create: (context) => UploadVideoBloc()),
-      ], child: const HomePage()),
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.deepPurple,
+              primary: Colors.black.withOpacity(0.5)),
+          useMaterial3: true,
+        ),
+        home: const HomePage(),
+      ),
     );
   }
 }

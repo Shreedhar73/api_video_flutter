@@ -1,0 +1,49 @@
+PODS:
+  - Alamofire (5.4.4)
+  - AnyCodable-FlightSchool (0.6.7)
+  - ApiVideoUploader (1.1.1):
+    - Alamofire (~> 5.4.3)
+    - AnyCodable-FlightSchool (~> 0.6.1)
+  - Flutter (1.0.0)
+  - image_picker_ios (0.0.1):
+    - Flutter
+  - video_player_avfoundation (0.0.1):
+    - Flutter
+  - video_uploader (0.0.2):
+    - ApiVideoUploader (= 1.1.1)
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
+  - video_player_avfoundation (from `.symlinks/plugins/video_player_avfoundation/ios`)
+  - video_uploader (from `.symlinks/plugins/video_uploader/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AnyCodable-FlightSchool
+    - ApiVideoUploader
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  image_picker_ios:
+    :path: ".symlinks/plugins/image_picker_ios/ios"
+  video_player_avfoundation:
+    :path: ".symlinks/plugins/video_player_avfoundation/ios"
+  video_uploader:
+    :path: ".symlinks/plugins/video_uploader/ios"
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  AnyCodable-FlightSchool: 261cbe76757802b17d471b9059b21e6fa5edf57b
+  ApiVideoUploader: d64cb6546058c6e9f67157c7c48c60d00ddd724c
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  image_picker_ios: 4a8aadfbb6dc30ad5141a2ce3832af9214a705b5
+  video_player_avfoundation: 81e49bb3d9fb63dccf9fa0f6d877dc3ddbeac126
+  video_uploader: 3980300fb2ada13b8276d2a9072232b4419ed98c
+
+PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
+
+COCOAPODS: 1.14.3

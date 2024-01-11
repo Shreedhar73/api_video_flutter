@@ -1,4 +1,4 @@
-import 'package:api_video/features/upload/data/pick_video/pick_video_datasource.dart';
+import 'package:api_video/features/pick_video/data/pick_video/pick_video_datasource.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:image_picker/image_picker.dart';
@@ -11,7 +11,7 @@ class PickVideoBloc extends Bloc<PickVideoEvent, PickVideoState> {
     on<PickLocalVideoEvent>((event, emit) async {
       final pickVideo = await PickALocalVideo().pickAVideo();
       if (pickVideo is XFile) {
-        emit(VideoPickedState(pickedVideo: pickVideo));
+        emit(VideoPickedState(pickedVideos: [pickVideo]));
       } else {
         emit(PickVideoError());
       }

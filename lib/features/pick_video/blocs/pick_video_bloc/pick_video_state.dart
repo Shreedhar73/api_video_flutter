@@ -10,11 +10,11 @@ class PickVideoInitial extends PickVideoState {
 }
 
 class VideoPickedState extends PickVideoState {
-  final XFile pickedVideo;
-  const VideoPickedState({required this.pickedVideo});
+  final List<XFile> pickedVideos;
+  const VideoPickedState({required this.pickedVideos});
 
   @override
-  List<Object?> get props => [pickedVideo];
+  List<Object?> get props => [pickedVideos];
 }
 
 class PickVideoError extends PickVideoState {
